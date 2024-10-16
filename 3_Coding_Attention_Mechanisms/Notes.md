@@ -28,4 +28,9 @@
 
 **3.3.1 A simple self attention mechanism without trainable weights**
 
-- 
+- An input sequence like "your journey starts with one step", x is an input sequence. 
+- The goal here is to calculate context vectors z(i) for each element x(i)
+- context vectors play a crucial role in self-attention. 
+  - Their purpose is to create an enriched representation of each element in an input sequence.
+- Unlike in self-attention mechanism, later by adding trainable weights, LLM will learn to construct these context vectors which will help LLMs to generate the next token.
+- The first step in implementing self-attention is to calculate the intermediate values also called as attention scores.
