@@ -34,3 +34,11 @@
   - Their purpose is to create an enriched representation of each element in an input sequence.
 - Unlike in self-attention mechanism, later by adding trainable weights, LLM will learn to construct these context vectors which will help LLMs to generate the next token.
 - The first step in implementing self-attention is to calculate the intermediate values also called as attention scores.
+- Beyond viewing dot product as mathematical operation, it is a measure of similarity because, it quantifies how close those two vectors are aligned.
+  - Higher the dot product, it indicates greater degree of similarity between the vectors
+  - Lower the dot product, they are far apart from each other
+- Next step is to normalize these attention scores, to main the training Stability
+- Attention weights are derived from attention score, its the normalized value which will sum's upto 1
+  - Normalization is better at managing extreme values and offers more favourable gradient properties during training.
+  - Softmax function ensures that attention weights are always positive
+- 

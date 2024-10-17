@@ -12,8 +12,19 @@ query = inputs[1]
 attn_scores_2 = torch.empty(inputs.shape[0])
 
 for i, x_i in enumerate(inputs):
+ print("results ",i, x_i, query)
  attn_scores_2[i] = torch.dot(x_i, query)
+
+attn_weights_2 = torch.softmax(attn_scores_2, dim=0)
+
+contexxt_vec_2 = torch.zeros(query.shape)
+
+for i, x_i in enumerate(inputs):
+ print(i, contexxt_vec_2, attn_weights_2[i], x_i, attn_weights_2[i]* x_i)
+ contexxt_vec_2 = contexxt_vec_2 + attn_weights_2[i] * x_i
 
 print(inputs.shape)
 print(inputs.shape[0])
-print(attn_scores_2)
+print("attn_scores_2 :",attn_scores_2)
+print("attn_weights_2 :", attn_weights_2)
+print("contexxt_vec_2 :", contexxt_vec_2)
