@@ -22,12 +22,13 @@
 - self-attention is the key component of contemporary LLMs, such as GPT series
 
 **3.3 Attending different parts of the input with self-attention**
-
+-
 - "self" refers to the mechanism's ability to compute attention weights by relating different positions within a single sequence, such as word sentence or pixels in an image.
 - In traditional attention mechanism, the focus is on the relationship between 2 different sequences, such as input sequence and an output sequence.
 
 **3.3.1 A simple self attention mechanism without trainable weights**
-
+-
+- Self attention is also called as "scaled dot-product attention"
 - An input sequence like "your journey starts with one step", x is an input sequence. 
 - The goal here is to calculate context vectors z(i) for each element x(i)
 - context vectors play a crucial role in self-attention. 
@@ -41,4 +42,15 @@
 - Attention weights are derived from attention score, its the normalized value which will sum's upto 1
   - Normalization is better at managing extreme values and offers more favourable gradient properties during training.
   - Softmax function ensures that attention weights are always positive
+
+**3.4 Implementing self-attention with trainable weights**
+-
+- The trainable weight matrices are crucial so the model can product good context vectors
+- To implement self attention mechanism trainable weight matrices are introduced. w(q), w(k), w(v)
+- Query vector w(q) is obtained via dot product multiplication between input (x) and weight query matrix w(q).
+- similarly we obtain the key weights and value weights by dot multiplication between key weight and value weights.
+- Weight parameters are the values of neural network that are optimized during training.
+- Attention weight vs weight parameters
+  - Attention vectors determine to which the context vector depends on different part of the input
+  - Weight parameters are fundamental, learned coefficients that determine the network's connections.
 - 
