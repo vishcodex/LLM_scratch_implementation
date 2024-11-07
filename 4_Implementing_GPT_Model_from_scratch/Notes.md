@@ -13,3 +13,11 @@
             "qkv_bias": False        # Query-Key-Value bias
             }  
       ```
+
+**4.2 Normalizing activations with layer normalization**
+-
+    - Training deep neural networks with many layers is challenging due to vanishing or exploding gradients. which means, the network has difficutly learning the underlying patterns in the data to a degree that would allow it to make predictions or decisions.
+    - The main idea behind layer normalization is to adjust the activations of a neural network layer to have a mean of 0 and a variance of 1.
+        - This adjustment speeds up the convergence to effective weights and ensures consistent, reliable training.
+    - Layer normalization is typically applied before and after the multi-head attention module.
+
