@@ -21,3 +21,12 @@
         - This adjustment speeds up the convergence to effective weights and ensures consistent, reliable training.
     - Layer normalization is typically applied before and after the multi-head attention module.
 
+**4.3 Implementing a feed forward network with GELU activations**
+-
+    - GELU activation function plays a crucial role in the neural network submodule.
+    
+**short connections**
+-
+    - Shortcut connections are important for overcoming the limitations posed by the vanishing gradient problem in deep neural networks. 
+
+
